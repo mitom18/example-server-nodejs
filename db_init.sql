@@ -24,4 +24,10 @@ ALTER TABLE `users`
 
 ALTER TABLE `users`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+
+INSERT INTO `users` (`email`, `password`, `phone`, `role`) VALUES
+('admin@admin.com', '$2b$10$5Qm3Z62Llku5fGp3nHDubO1U8wbo2zMCGTy2xglmf.FyzFgBB8siG', '111222333', 'administrator');
+
+
 COMMIT;

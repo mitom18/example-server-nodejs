@@ -8,10 +8,11 @@ Implementation of example backend application written in TypeScript powered by E
  - ORM
  - HTTP REST API
  - Logger
+ - Authentication
 
 ## Usage
 
-Application requires MySQL database. Ensure you have access to a MySQL database server. You can initialize the database with `db_init.sql` script.
+Application requires MySQL database. Ensure you have access to a MySQL database server. You can initialize the database with `db_init.sql` script. Database contains user with credentials `admin@admin.com` / `password`.
 
 To run this application, you'll need [Node.js](https://nodejs.org/en/) (which comes with [npm](https://www.npmjs.com/)) installed on your computer.
 
@@ -38,6 +39,7 @@ npm start
  - [Express](https://expressjs.com/)
  - [TypeORM](https://typeorm.io/#/)
  - [Winston](https://github.com/winstonjs/winston)
+ - [JWT](https://jwt.io/)
 
 ## Licence
 

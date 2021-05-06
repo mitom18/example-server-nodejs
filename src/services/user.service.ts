@@ -31,6 +31,18 @@ export class UserService {
     async getAll(): Promise<User[]> {
         return await this.userRepository.getAll();
     }
+
+    async getByEmail(email: string): Promise<User | null> {
+        return await this.userRepository.getByEmail(email);
+    }
+
+    async checkCredentials(email: string, password: string): Promise<boolean> {
+        const user = await this.userRepository.getByEmail(email);
+        if (!user) {
+            return false;
+        }
+        return bcrypt.compare(password, user.password);
+    }
 }
 
 export const createUserService = (
