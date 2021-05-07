@@ -21,6 +21,7 @@
         "@types/express-jwt": "^6.0.1",
         "@types/jsonwebtoken": "^8.5.1",
         "@types/node": "^15.0.1",
+        "pkg": "^5.1.0",
         "rimraf": "^3.0.2",
         "ts-node": "^9.1.1",
         "typescript": "^4.2.4"
@@ -28,7 +29,8 @@
     "scripts": {
         "start:dev": "ts-node src/index.ts",
         "build": "rimraf ./dist && tsc",
-        "start": "npm run build && node dist/index.js"
+        "start": "npm run build && node dist/index.js",
+        "compile": "pkg --targets node14-linux-x64,node14-win-x64 --out-path bin --compress GZip dist/index.js"
     },
     "repository": {
         "type": "git",

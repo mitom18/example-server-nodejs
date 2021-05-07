@@ -22,15 +22,20 @@ Then from your command line:
 # Install dependencies
 npm install
 
-# Run the app
+# Run the app in development
 npm run start:dev
 
-# Or build the production version
+# Build the production version
 npm build
 
-# Or build and run the production version
+# Build and run the production version
 npm start
+
+# Compile the production bundle to executable binary
+npm run compile
 ```
+
+> **_IMPORTANT:_** When you run the executable binary, ensure you have the proper `.env` file in the same directory as the binary.
 
 ## Built With
 
@@ -39,7 +44,9 @@ npm start
  - [Express](https://expressjs.com/)
  - [TypeORM](https://typeorm.io/#/)
  - [Winston](https://github.com/winstonjs/winston)
+ - [Zod](https://github.com/colinhacks/zod)
  - [JWT](https://jwt.io/)
+ - [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 
 ## Licence
 
