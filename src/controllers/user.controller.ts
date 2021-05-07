@@ -8,6 +8,7 @@ import { HttpException } from "../utils/types";
 const userService = createUserService(userRepository);
 
 const userSchema = z.object({
+    id: z.number().optional(),
     email: z.string().email(),
     password: z.string(),
     phone: z.string(),

@@ -26,10 +26,10 @@ npm install
 npm run start:dev
 
 # Build the production version
-npm build
+npm run build
 
 # Build and run the production version
-npm start
+npm run start
 
 # Compile the production bundle to executable binary
 npm run compile

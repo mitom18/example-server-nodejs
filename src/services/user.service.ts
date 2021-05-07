@@ -18,6 +18,9 @@ export class UserService {
     }
 
     async edit(id: number, partialUser: DeepPartial<User>): Promise<void> {
+        if (partialUser.id) {
+            delete partialUser.id;
+        }
         if (partialUser.password !== undefined) {
             partialUser.password = await bcrypt.hash(partialUser.password, 10);
         }
