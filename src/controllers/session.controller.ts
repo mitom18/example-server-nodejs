@@ -44,9 +44,9 @@ export const getCurrent = async (
     res: Response,
     next: NextFunction
 ) => {
-    const user = req.user;
-    if (user) {
-        res.json({ ...user, password: undefined });
+    const jwtPayload = req.user as { user: object } | undefined;
+    if (jwtPayload) {
+        res.json({ ...jwtPayload.user, password: undefined });
     } else {
         next(new HttpException(401, `Not authenticated`));
     }
