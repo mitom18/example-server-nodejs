@@ -48,6 +48,10 @@ npm run compile
  - [JWT](https://jwt.io/)
  - [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 
+## Performance
+
+Performance tests and their results can be seen [here](https://github.com/mitom18/deno-vs-nodejs-autocannon#nodejs).
+
 ## Licence
 
 MIT
